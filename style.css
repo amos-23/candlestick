@@ -24,3 +24,4 @@ article h3{margin:0 0 6px}article p{margin:0;color:var(--mut);font-size:.9rem}
 dt{font-weight:700;margin-top:14px}dd{margin:0 0 0 0;color:var(--mut)}
 .wrap .btn{margin-top:28px}
 footer{text-align:center;padding:28px;color:var(--mut);border-top:1px solid #16351f;font-size:.9rem}
+.date{font-size:1.4rem;font-weight:700;color:var(--g);margin:0 0 8px}
