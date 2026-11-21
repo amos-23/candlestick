@@ -3,8 +3,8 @@
   function onScroll(){nav.classList.toggle('solid',window.scrollY>24)}
   onScroll();addEventListener('scroll',onScroll,{passive:true});
 
-  // Countdown to Dec 5, 2026 (local midnight; start time TBA)
-  var target=new Date(2026,11,5,0,0,0).getTime();
+  // Countdown to Dec 5, 2026, 10:00 AM WAT (Nigeria)
+  var target=Date.parse("2026-12-05T10:00:00+01:00");
   var el={d:d,h:h,m:m,s:s};
   function pad(n){return String(n).padStart(2,'0')}
   function tick(){
