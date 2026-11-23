@@ -3,6 +3,20 @@
   function onScroll(){nav.classList.toggle('solid',window.scrollY>24)}
   onScroll();addEventListener('scroll',onScroll,{passive:true});
 
+  // Speaker bios: click/tap toggles; hover handled in CSS
+  document.querySelectorAll('.speaker').forEach(function(card){
+    var btn=card.querySelector('.bio-btn');
+    function set(open){
+      document.querySelectorAll('.speaker.open').forEach(function(o){if(o!==card){o.classList.remove('open');o.querySelector('.bio-btn').setAttribute('aria-expanded','false')}});
+      card.classList.toggle('open',open);btn.setAttribute('aria-expanded',String(open));
+    }
+    card.addEventListener('click',function(e){
+      if(e.target.closest('.bio-close')){set(false);e.stopPropagation();return}
+      set(!card.classList.contains('open'));
+    });
+  });
+  addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.speaker.open').forEach(function(c){c.classList.remove('open');c.querySelector('.bio-btn').setAttribute('aria-expanded','false')})});
+
   // Countdown to Dec 5, 2026, 10:00 AM WAT (Nigeria)
   var target=Date.parse("2026-12-05T10:00:00+01:00");
   var el={d:d,h:h,m:m,s:s};

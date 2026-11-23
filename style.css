@@ -83,3 +83,14 @@ footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;paddin
   footer{padding-bottom:84px}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+
+/* Speaker bios: hover (mouse) or tap/click to reveal */
+.speaker{position:relative;overflow:hidden;min-height:340px;cursor:pointer}
+.bio-btn{display:flex;gap:6px;align-items:center;margin-top:16px;background:none;border:1px solid var(--line);color:var(--g);font:600 .85rem Inter,sans-serif;padding:8px 14px;border-radius:999px;cursor:pointer}
+.bio-btn:hover{border-color:var(--g)}
+.bio{position:absolute;inset:0;padding:26px;background:linear-gradient(160deg,#0f2a1a,#0a1a10);border-radius:inherit;overflow-y:auto;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .3s,transform .3s,visibility .3s}
+.bio h3{color:var(--g);margin:0 0 10px;padding-right:36px}
+.bio p{margin:0;color:var(--fg);font-size:.9rem;line-height:1.55}
+.bio-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--fg);font-size:1.3rem;line-height:1;cursor:pointer}
+.speaker.open .bio{opacity:1;visibility:visible;transform:none}
+@media(hover:hover){.speaker:hover .bio{opacity:1;visibility:visible;transform:none}}
