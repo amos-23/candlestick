@@ -96,8 +96,9 @@ footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;paddin
 @media(hover:hover){.speaker:hover .bio{opacity:1;visibility:visible;transform:none}}
 
 /* Christian In Tech logo */
-.presenter{display:flex;justify-content:center;margin:0 0 22px}
-.presenter a{display:inline-flex}
-.presenter img{height:40px;width:auto}
+.brands{display:flex;align-items:center;gap:16px}
+.cit{display:inline-flex}.cit img{height:26px;width:auto}
+.brands .sep{width:1px;height:24px;background:var(--line)}
+@media(max-width:420px){.brands{gap:10px}.cit img{height:22px}.brand{font-size:1rem}}
 .foot-brand{display:flex;align-items:center;gap:14px}
 .foot-brand img{height:32px;width:auto}
