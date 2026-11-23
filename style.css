@@ -54,7 +54,7 @@ p{color:var(--mut)}
 .grid.four{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .card,.tile{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:transform .25s,border-color .25s}
 .card:hover,.tile:hover{transform:translateY(-4px);border-color:var(--g2)}
-.av{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font:700 1.2rem 'Space Grotesk';color:#03180b;background:linear-gradient(135deg,var(--g),var(--g2));margin-bottom:16px}
+.av{width:88px;height:88px;box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--g2);border-radius:50%;object-fit:cover;display:grid;place-items:center;font:700 1.2rem 'Space Grotesk';color:#03180b;background:linear-gradient(135deg,var(--g),var(--g2));margin-bottom:16px}
 .card h3,.tile h3{margin:0 0 4px;font-size:1.2rem}.card p{margin:0;color:var(--fg);font-size:.95rem}.card small{color:var(--mut)}
 .tba{border-style:dashed;background:transparent}.tba .av{background:transparent;border:2px dashed var(--g2);color:var(--g)}
 .tile span{font-size:1.8rem}.tile p{margin:6px 0 0;font-size:.95rem}
